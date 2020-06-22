@@ -6,18 +6,54 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:src="@drawable/example"
-            android:id="@+id/image" android:paddingLeft="10dp" android:paddingRight="10dp"/>
-
-    <Button
-            android:id="@+id/button"
-            android:text="Apply Effect"
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editText2" android:layout_weight="1" android:hint="Input image path"
+                android:inputType="textUri"/>
+        <Button
+                android:text="Open..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button2" android:layout_weight="1"/>
+    </LinearLayout>
+    <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:layout_margin="20dp"/>
+            android:ems="10"
+            android:id="@+id/editText" android:hint="Argument(s)"
+            android:text="fx_bokeh 3,8,0,30,8,4,0.3,0.2,210,210,80,160,0.7,30,20,20,1,2,170,130,20,110,0.15,0"
+            android:inputType="textMultiLine"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1" android:fillViewport="true">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/example"
+                android:id="@+id/image" android:paddingLeft="10dp" android:paddingRight="10dp"
+                android:layout_margin="0dp"/>
+    </ScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+        <Button
+                android:id="@+id/button"
+                android:text="Apply Effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        <Button
+                android:text="Save as png..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button3" android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>
